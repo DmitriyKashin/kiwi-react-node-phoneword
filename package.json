@@ -1,0 +1,36 @@
+{
+  "name": "kiwi-react-node-phoneword",
+  "version": "1.0.0",
+  "description": "Kiwi Practical Task",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitriyKashin/kiwi-react-node-phoneword.git"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "kiwi",
+    "phoneword"
+  ],
+  "author": "Dmitry Kashin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitriyKashin/kiwi-react-node-phoneword/issues"
+  },
+  "homepage": "https://github.com/DmitriyKashin/kiwi-react-node-phoneword#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
