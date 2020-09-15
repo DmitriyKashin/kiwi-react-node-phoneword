@@ -29,7 +29,9 @@
   "dependencies": {
     "config": "^3.3.1",
     "express": "^4.17.1",
-    "express-validator": "^6.6.1"
+    "express-validator": "^6.6.1",
+    "node-cache": "^5.1.2",
+    "wordlist-english": "^1.2.1"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",

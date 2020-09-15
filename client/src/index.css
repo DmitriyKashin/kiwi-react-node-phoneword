@@ -25,3 +25,19 @@
   display: flex;
   align-items: center;
 }
+.btn-small.disabled {
+  pointer-events: none;
+}
+.basic-margin {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .phonewords .s12.keyboard{
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    border-top: 1px solid grey;
+  }
+}
+
