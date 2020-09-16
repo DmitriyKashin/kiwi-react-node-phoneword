@@ -15,6 +15,7 @@ export const useHttp = () => {
         throw new Error (data.message || 'Something is wrong')
       }
       setLoading(false)
+      setError(false)
       return data
     } catch (error) {
       setLoading(false)
@@ -22,7 +23,6 @@ export const useHttp = () => {
       throw error
     }
   }, [])
-  const clearError = () => setError(null)
   return { loading, request, error }
 
 }
