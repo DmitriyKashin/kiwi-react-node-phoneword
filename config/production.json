@@ -1,0 +1,53 @@
+{
+  "port": 5000,
+  "buttons":[
+    {
+      "number": "1",
+      "symbols": [ "_", ",", "@" ]
+    },
+    {
+      "number": "2",
+      "symbols": [ "a", "b", "c" ]
+    },
+    {
+      "number": "3",
+      "symbols":[ "d", "e", "f" ]
+    },
+    {
+      "number": "4",
+      "symbols": [ "g", "h", "i" ]
+    },
+    {
+      "number": "5",
+      "symbols": [ "j", "k", "l" ]
+    },
+    {
+      "number": "6",
+      "symbols": [ "m", "n", "o" ]
+    },
+    {
+      "number": "7",
+      "symbols":[ "p", "q", "r", "s" ]
+    },
+    {
+      "number": "8",
+      "symbols": [ "t", "u", "v" ]
+    },
+    {
+      "number": "9",
+      "symbols": [ "w", "x", "y", "z" ]
+    },
+    {
+      "number": "*",
+      "symbols": []
+    },
+    {
+      "number": "0",
+      "symbols": []
+    },
+    {
+      "number": "#",
+      "symbols": []
+    }
+  ]
+}

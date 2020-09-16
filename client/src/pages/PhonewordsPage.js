@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useHttp } from '../hooks/http.hook'
 import { Keyboard } from '../components/Keyboard'
 import { Wordlist } from '../components/Wordlist'
@@ -13,9 +13,21 @@ export const PhonewordsPage = () => {
   const [phoneWords, setPhoneWords] = useState([])
 
   
+  const getPhonewords = useCallback(async () => {
+    try {
+      if (typedNumbers !== '') {
+        const params = new URLSearchParams({typedNumbers, showReal}).toString();
+        const data = await request(`/api/phonewords/generate?${params}`, 'GET')
+        setPhoneWords(data.phoneWords)
+      } else {
+        setPhoneWords([])
+      }
+    } catch (error) {}
+  }, [request, typedNumbers, showReal])
+
   useEffect(() => {
     getPhonewords()
-  }, [typedNumbers, showReal])
+  }, [typedNumbers, showReal, getPhonewords])
 
   const changeNumbersHandler = (event, number) => {
     if (number === false) {
@@ -25,20 +37,7 @@ export const PhonewordsPage = () => {
     }
   }
 
-  const getPhonewords = async () => {
-    try {
-      if (typedNumbers !== '') {
-        if (loading) {
-          return setTimeout(getPhonewords, 100)
-        }
-        const params = new URLSearchParams({typedNumbers, showReal}).toString();
-        const data = await request(`/api/phonewords/generate?${params}`, 'GET')
-        setPhoneWords(data.phoneWords)
-      } else {
-        setPhoneWords([])
-      }
-    } catch (error) {}
-  }
+  
   
   return (
     <div>
